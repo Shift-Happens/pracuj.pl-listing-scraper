@@ -1,6 +1,8 @@
-# Pracuj.pl Job Scraper - AWS Lambda Edition
+# Pracuj.pl Listing Scraper - AWS Lambda Edition
 
 Automated job scraper that monitors Pracuj.pl for new job offers, stores them in DynamoDB, and sends notifications via Telegram.
+![image](https://github.com/user-attachments/assets/880f4254-a4bf-444f-97e6-08c260fa1b12)
+
 
 ## Architecture
 

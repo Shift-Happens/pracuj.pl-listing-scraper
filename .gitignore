@@ -81,6 +81,7 @@ ipython_config.py
 
 # AWS SAM
 .aws-sam/
+samconfig.toml
 
 # pyenv
 .python-version

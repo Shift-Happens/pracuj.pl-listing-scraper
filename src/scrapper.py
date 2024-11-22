@@ -27,7 +27,7 @@ def extract_job_offers(json_text):
     
     return [
         {
-            'id': generate_unique_id(offer),  # Generate a unique id
+            'id': offer['offers'][0]['partitionId'],
             'title': offer['jobTitle'],
             'company': offer['companyName'],
             'technologies': offer['technologies'],

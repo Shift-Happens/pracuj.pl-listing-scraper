@@ -59,7 +59,7 @@ def format_offer(offer):
 🏠 *Work Modes:* {escape_markdown(', '.join(offer['work_modes']))}
 📄 *Contract Types:* {escape_markdown(', '.join(offer['contract_types']))}
 📍 *Location:* {escape_markdown(', '.join(offer['workplace']))}
-🔗 [View Offer](https://it.pracuj.pl/praca/{offer['id']})
+🔗 [View Offer](https://www.pracuj.pl/praca/{escape_markdown(offer['title'].lower().replace(' ', '-'))},oferta,{offer['id']})
 """
 
 def split_messages(offers, max_length=3000):  # Using 3000 to leave room for formatting

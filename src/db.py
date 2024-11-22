@@ -8,7 +8,7 @@ def get_db_connection():
 def create_table():
     connection = get_db_connection()
     cursor = connection.cursor()
-    cursor.execute('''s
+    cursor.execute('''
         CREATE TABLE IF NOT EXISTS job_offers (
             id TEXT PRIMARY KEY,
             title TEXT,

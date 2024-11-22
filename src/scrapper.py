@@ -1,5 +1,6 @@
 import requests
 import json
+import hashlib
 
 def requ_pracuj():
     url = 'https://it.pracuj.pl/praca/aws%20administrator;kw'
@@ -7,6 +8,10 @@ def requ_pracuj():
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
     response = requests.get(url, headers=headers)
     return response.text
+
+def generate_unique_id(offer):
+    unique_string = f"{offer['jobTitle']}_{offer['companyName']}"
+    return hashlib.md5(unique_string.encode()).hexdigest()
 
 def extract_job_offers(json_text):
     # Find the script tag with __NEXT_DATA__
@@ -22,7 +27,7 @@ def extract_job_offers(json_text):
     
     return [
         {
-            'id': offer['id'],
+            'id': generate_unique_id(offer),  # Generate a unique id
             'title': offer['jobTitle'],
             'company': offer['companyName'],
             'technologies': offer['technologies'],

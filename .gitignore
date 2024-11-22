@@ -79,6 +79,9 @@ target/
 profile_default/
 ipython_config.py
 
+# AWS SAM
+.aws-sam/
+
 # pyenv
 .python-version
 

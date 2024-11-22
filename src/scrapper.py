@@ -3,7 +3,7 @@ import json
 import hashlib
 
 def requ_pracuj():
-    url = 'https://it.pracuj.pl/praca/aws%20administrator;kw'
+    url = 'https://it.pracuj.pl/praca/devops%20engineer;kw'
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
     response = requests.get(url, headers=headers)
